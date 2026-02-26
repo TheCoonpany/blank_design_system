@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "sass": "^1.97.3",
+    "vitepress": "2.0.0-alpha.16"
+  },
+  "scripts": {
+    "start": "vitepress dev",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.29"
+  }
+}
