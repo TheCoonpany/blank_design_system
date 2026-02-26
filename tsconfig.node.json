@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "./tsconfig.paths.json",
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "vue",
+      "vite/client",
+    ]
+  },
+  "include": [
+    "vite.config.ts",
+    "vite.config.*.ts",
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+  ],
+}
