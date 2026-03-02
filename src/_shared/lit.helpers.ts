@@ -7,15 +7,15 @@ export function __lit<T extends LitElement>(
   element: LibraryComponent<T>,
   props: ComponentKeys<T>,
 ) {
+  __defineProperties(element, props);
   __defineElement(element);
-  __properties(element, props);
 }
 
 function __defineElement(element: LibraryComponent<LitElement>): void {
   if (!customElements.get(element.__name__)) customElement(element.__name__)(element);
 }
 
-function __properties<T extends LitElement>(element: LibraryComponent<T>, props: ComponentKeys<T>) {
+function __defineProperties<T extends LitElement>(element: LibraryComponent<T>, props: ComponentKeys<T>) {
   for (const [key, value] of Object.entries(props)) {
     __decorateClass([property({
       type: value[0],
@@ -26,7 +26,7 @@ function __properties<T extends LitElement>(element: LibraryComponent<T>, props:
 }
 
 function __decorateClass(decorators: PropertyDecorator[], target: any, key: string | symbol) {
-  let result;
+  let result: any;
   for (let i = decorators.length - 1, decorator; i >= 0; i--) {
     if (decorator = decorators[i])
       result ||= decorator(target, key, result);

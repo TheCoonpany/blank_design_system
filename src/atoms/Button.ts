@@ -1,10 +1,11 @@
-import { html, LitElement, unsafeCSS } from 'lit';
+import { html, unsafeCSS } from 'lit';
 
 import SCSS from './Button.scss?inline';
-import { __lit } from '../_shared/lit.helpers';
+import { Component, __lit } from '../_shared/lit';
+import { Button_Props } from './Button.props';
 
-export class Button extends LitElement {
-  static __name__ = 'app-button' as const;
+export class AppButton extends Component implements Button_Props {
+  static __name__ = `${Component.prefix}-button` as const;
 
   public text?: string;
 
@@ -19,12 +20,12 @@ export class Button extends LitElement {
   static styles = unsafeCSS(SCSS);
 }
 
-__lit(Button, {
+__lit(AppButton, {
   text: [String],
 });
 
 declare global {
   interface HTMLElementTagNameMap {
-    'app-button': Button;
+    [AppButton.__name__]: AppButton;
   }
 }

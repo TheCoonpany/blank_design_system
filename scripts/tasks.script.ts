@@ -57,9 +57,7 @@ const COMPONENT_FOLDERS = [
         })
       };
 
-      const parsedData = JSON.stringify(data, null, 2).replace(/\"(\w+)\"\:/g, '$1:');
-
-      return `export const ${category.toUpperCase()} = ${parsedData};`;
+      return `export const ${category.toUpperCase()} = ${toTSObject(data)};`;
     })
     .join('\n\n'));
 })();
@@ -67,4 +65,8 @@ const COMPONENT_FOLDERS = [
 
 function capitalize(str: string) {
   return str[0].toUpperCase() + str.slice(1);
+}
+
+function toTSObject(obj: Record<string, any>) {
+  return JSON.stringify(obj, null, 2).replace(/\"(\w+)\"\:/g, '$1:');
 }
