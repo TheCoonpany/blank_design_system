@@ -17,4 +17,4 @@ jobs:
         run: npm i -g pnpm
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm i --frozen-lockfile
