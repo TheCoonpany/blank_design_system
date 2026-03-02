@@ -1,7 +1,9 @@
 {
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
+    "*.mjs": " ${capture}.d.ts, ${capture}.props.d.ts",
     "*.ts": "${capture}.js, ${capture}.d.ts, ${capture}.props.ts, ${capture}.scss",
+    "vite.config.ts": "vite.config.*.ts",
     "*.md": "${capture}.meta.ts",
   }
 }

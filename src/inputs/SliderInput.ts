@@ -5,7 +5,7 @@ import { Component, __lit } from '../_shared/lit';
 import { SliderInput_Props } from './SliderInput.props';
 
 export class AppSliderInput extends Component implements SliderInput_Props {
-  static __name__ = `${Component.prefix}-tooltip` as const;
+  static __name__ = `${Component.prefix}-slider-input` as const;
 
   render() {
     return html``;
