@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: PR
-    runs-on: ubuntu-latests
+    runs-on: ubuntu-slim
 
     steps:
       - name: Checkout
