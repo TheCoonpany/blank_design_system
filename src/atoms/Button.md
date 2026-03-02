@@ -4,5 +4,4 @@ import './Button';
 
 # Button
 
-
 <app-button text="button"/>

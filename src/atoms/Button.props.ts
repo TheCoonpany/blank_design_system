@@ -1,4 +1,3 @@
-export type Button_Props =
-  & {
+export interface Button_Props {
 
-  };
+};
