@@ -1,5 +1,5 @@
 <script setup>
-import './Button';
+import './LangSelect';
 </script>
 
-# Button
+# LangSelect

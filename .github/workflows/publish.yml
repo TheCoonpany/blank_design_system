@@ -4,6 +4,10 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     name: Publish
@@ -19,5 +23,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
 
-      - name: Install dependencies
-        run: pnpm build
+      # Builds
+
+      # - name: Build lib
+      #   run: pnpm build

@@ -12,13 +12,14 @@ export function listComponents(): Record<string, string> {
       && !/\.(props|meta)\.ts$/.exec(file.name)
       && !file.parentPath.endsWith('_shared')
       && !file.name.startsWith('_'))
-    .map(({ name, parentPath }) => {
-      console.log(name);
-      return [
-        `components/${name.replace(/\.ts$/, '')}`,
-        path.resolve(parentPath, name)
-      ];
-    });
+    .map(({ name, parentPath }) => [
+      `components/${name.replace(/\.ts$/, '')}`,
+      path.resolve(parentPath, name)
+    ]);
 
   return Object.fromEntries(entries);
+}
+
+export function generatePackageJson() {
+
 }

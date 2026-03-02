@@ -18,3 +18,8 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
+
+      # Builds
+
+      # - name: Build docs
+      #   run: pnpm docs:build

@@ -1,5 +1,7 @@
 {
   "recommendations": [
-    "yoavbls.pretty-ts-errors"
+    "yoavbls.pretty-ts-errors",
+    "github.vscode-github-actions",
+    "runem.lit-plugin"
   ]
 }
